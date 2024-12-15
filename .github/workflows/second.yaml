@@ -1,5 +1,5 @@
 name: Second 
-on: push,workflow_dispatch
+on: push
 jobs:
     Install:
         runs-on: ubuntu-latest
@@ -21,7 +21,7 @@ jobs:
           - name: Run Tests
             run: npm run test
     deployment:
-        needs: Install, test
+        needs: [Install, test]
         runs-on: ubuntu-latest
         steps:
           - name: Get Code
