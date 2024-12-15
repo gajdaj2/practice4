@@ -20,8 +20,8 @@ jobs:
             run: npm run lint
           - name: Run Tests
             run: npm run test
-      deployment:
-        needs: [Install, test]
+    deployment:
+        needs: Install, test
         runs-on: ubuntu-latest
         steps:
           - name: Get Code
