@@ -1,5 +1,5 @@
 name: Second 
-on: [push,workflow_dispatch]
+on: push,workflow_dispatch
 jobs:
     Install:
         runs-on: ubuntu-latest
